@@ -14,7 +14,7 @@ const RemoveBtn = ({ id }: RemoveBtnProps) => {
     const confirmed = confirm('Are you sure you want to delete this topic?');
 
     if (confirmed) {
-      const res = await fetch(`http://localhost:3000/api/topics/${id}`, {
+      const res = await fetch(`${process.env.BASE_URL}/api/topics/${id}`, {
         method: 'DELETE',
       });
 

@@ -29,7 +29,7 @@ const EditForm = ({ id, title, description }: EditFormProps) => {
     event.preventDefault();
 
     try {
-      const res = await fetch(`http://localhost:3000/api/topics/${id}`, {
+      const res = await fetch(`${process.env.BASE_URL}/api/topics/${id}`, {
         method: 'PUT',
         headers: {
           'Content-type': 'application/json',

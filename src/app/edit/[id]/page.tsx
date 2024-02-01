@@ -6,7 +6,7 @@ interface EditPageProps {
 
 const getTopicById = async (id: string) => {
   try {
-    const res = await fetch(`http://localhost:3000/api/topics/${id}`, {
+    const res = await fetch(`${process.env.BASE_URL}/api/topics/${id}`, {
       cache: 'no-store',
     });
 

@@ -12,7 +12,7 @@ interface ITopic {
 
 const fetchTopics = async () => {
   try {
-    const res = await fetch('http://localhost:3000/api/topics');
+    const res = await fetch(`${process.env.BASE_URL}/api/topics`);
 
     if (!res.ok) throw new Error('Failed to fetch topics!');
     return res.json();
