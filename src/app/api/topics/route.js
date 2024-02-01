@@ -15,7 +15,7 @@ export const GET = async () => {
   return NextResponse.json({ topics });
 };
 
-export const DELETE = async (request) => {
+export const DELETE = async () => {
   const id = request.nextUrl.searchParams.get('id');
   await connectMongoDB();
   await Topic.findByIdAndDelete(id);
