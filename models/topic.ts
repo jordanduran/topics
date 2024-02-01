@@ -1,6 +1,11 @@
 import mongoose, { Schema } from 'mongoose';
 
-const topicSchema = new Schema(
+interface ITopic {
+  title: string;
+  description: string;
+}
+
+const topicSchema = new Schema<ITopic>(
   {
     title: String,
     description: String,
