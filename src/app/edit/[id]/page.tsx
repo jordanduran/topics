@@ -1,4 +1,4 @@
-import EditForm from '@/components/EditForm';
+import EditForm from '../../../components/EditForm';
 
 interface EditPageProps {
   params: { id: string };

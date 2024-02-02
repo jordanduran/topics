@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
-import CreateForm from '@/components/CreateForm';
+import CreateForm from '../../components/CreateForm';
 
 const CreatePage = () => {
   const [title, setTitle] = useState('');
